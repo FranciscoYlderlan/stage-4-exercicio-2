@@ -20,10 +20,6 @@ function dataStudent() {
         }
 }
 
-function addStudent (dataStudent) {
-    students.push(dataStudent)
-}
-
 function viewStudents(students) {
     if(students.length === 0) alert(`Não há candidatos cadastrados.`) 
     students.forEach(student => {
@@ -47,7 +43,7 @@ function menu() {
     switch (option) {
         case "1":
             let data = dataStudent();
-            addStudent(data);
+            students.push(data);
             menu();
             break;
         case "2":
